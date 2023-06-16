@@ -293,17 +293,16 @@
 
         window.onload = function () {
             gsap.utils.toArray(".content__item").forEach(function (item) {
-            item_tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: item,
-                    start: "top 90%",
-                    end: "bottom 10%",
-                    scrub: true,
-                    markers: true,
-                    toggleActions: "resume pause reverse pause"
+                item_tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 90%",
+                        end: "bottom 10%",
+                        scrub: true,
+                        markers: true,
+                        toggleActions: "resume pause reverse pause"
                     }
                 });
-
                 item_tl.from(item, { opacity: 0, duration: 0.5 });
                 item_tl.to(item, { opacity: 0, duration: 0.5 });
             });
