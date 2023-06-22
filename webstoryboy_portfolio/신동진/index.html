@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <style>
+        .wrap {
+            width: 100vw;
+            height: 100vh;
+        }
+        .wrap > section {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            box-sizing: border-box;
+        }
+        #section1 {
+            background-color: #ccc;
+        }
+        #section2 {
+            background-color: #222;
+        }
+        #section3 {
+            background-color: #333;
+        }
+        #section4 {
+            background-color: #444;
+        }
+        .s1-box1 {
+            width: 100px;
+            height: 100px;
+            background-color: #000;
+        }
+        #section2 {
+            height: 200vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .s2-box1 {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            margin-bottom: 400px;
+        }
+        .s2-box2 {
+            width: 100px;
+            height: 100px;
+            background-color: #b76161;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <section id="section1" class="parallax__item">
+            <div class="s1-box1"></div>
+        </section>
+        <section id="section2" class="parallax__item">
+            <div class="s2-box1 box"></div>
+            <div class="s2-box2 box"></div>
+        </section>
+        <section id="section3" class="parallax__item"><span>3</span></section>
+        <section id="section4" class="parallax__item"><span>4</span></section>
+        <section id="section5" class="parallax__item"><span>5</span></section>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <script>
+        let panel1 = document.querySelector(".s2-box1")
+
+        ScrollTrigger.create({
+            trigger: panel1,
+            start: "top top",
+            end: "bottom -1500px",
+            markers: true,
+            pin: true,
+        });
+
+        let panel2 = document.querySelector(".s2-box2")
+
+        ScrollTrigger.create({
+            trigger: panel2,
+            start: "top 100px",
+            end: "bottom -1400px",
+            markers: true,
+            pin: true,
+        });
+     
+
+
+
+
+    </script>
+</body>
+</html>

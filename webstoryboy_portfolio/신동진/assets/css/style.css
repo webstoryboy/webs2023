@@ -1,0 +1,64 @@
+.wrap {
+    width: 500vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.wrap > section {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+}
+#section1 span,
+.wrap > section > span {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 10vw;
+}
+#section1 {
+    background-color: #ccc;
+}
+#section2 {
+    background-color: #222;
+}
+#section3 {
+    background-color: #333;
+}
+#section4 {
+    background-color: #444;
+}
+#section2  {
+    position: relative;
+}
+#section2 .s1-box1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100vh;
+    background-color: #fff;
+    transform: translateX(80vw);
+}
+#section2 .s1-box2 {
+    position: absolute;
+    left: 100px;
+    top: 0;
+    width: 100px;
+    height: 100vh;
+    background-color: #44ffd7;
+    transform: translateX(80vw);
+}
+#section2 .s1-box3 {
+    position: absolute;
+    left: 200px;
+    top: 0;
+    width: 100px;
+    height: 100vh;
+    background-color: #ff9696;
+    transform: translateX(80vw);
+}

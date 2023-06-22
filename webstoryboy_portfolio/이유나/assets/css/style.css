@@ -1,0 +1,155 @@
+#main {}
+
+#main > section {
+    width: 100%;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    height: 66px;
+    background-color: #f5fff85e;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    z-index: 10000;
+}
+#header h1 {
+    font-size: 20px;
+}
+#header h1 a {
+    padding: 10px;
+}
+#header .contact a {
+    padding: 10px;
+}
+#section1 {
+    width: 100%;
+    height: 240vh;
+    background-image: url(../img/section01.jpg);
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+    padding-bottom: 30vh;
+}
+#section1 h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 34vw;
+    line-height: 1;
+    color: #fff;
+    font-weight: 300;
+    padding-top: 4vw;
+}
+#section1 .desc1 {
+    font-size: 30;
+    width: 500px;
+    padding-left: 10vw;
+    color: #fff;
+}
+#section1 .desc2 {
+    font-size: 5vw;
+    color: #fff;
+    line-height: 1;
+    width: 70%;
+    margin: 30% auto ;
+    font-weight: 300;
+}
+#section1 .desc3 {
+    width: 30vw;
+    height: 30vw;
+    margin: 20vw auto 10vw auto;
+    box-shadow: 7px 7px 0 0px rgba(0,0,0,0.3);
+}
+#section1 .desc3 .name {
+    color: #fff;
+    font-size: 4vw;
+    text-align: right;
+    margin-top: -2.8vw;
+    margin-right: -2vw;
+    font-weight: 300;
+}
+
+/* media */
+@media (max-width: 800px){
+    #header {
+        height: 50px;
+    }
+    #header h1 a {
+        padding: 3px;
+        font-size: 16px;
+    }
+    #header .contact a {
+        padding: 3px;
+        font-size: 16px;
+    }
+    #section1 h2 {
+        padding-top: 90px;
+    }
+    #section1 .desc1 {
+        font-size: 20px;
+        padding: 0 10%;
+        text-align: center;
+        width: 100%;
+    }
+    #section1 .desc2 {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 20%;
+    }
+    #section1 .desc3 {
+        width: 80vw;
+        box-shadow: none
+    }
+}
+
+
+/* section2 */
+#section2 {
+    height: 4000px;
+    padding: 20vw 0;
+}
+#section2 h2 {
+    font-size: 15vw;
+    font-weight: 100;
+    text-align: right;
+    margin-bottom: 5vw;
+    margin-right: -20vw;
+}
+#section2 .subTitle {
+    width: 60vw;
+    text-align: left;
+    font-size: 5vw;
+    line-height: 1;
+    font-weight: 200;
+    margin-left: auto;
+    margin-bottom: 5vw;
+}
+.aboutBox1 .imgWrap {
+    margin-left: 5vw;
+    width: 40vw;
+    height: 50vw;
+    position: relative;
+}
+.aboutBox1 .imgWrap .img {
+    position: absolute;
+    left: 0; 
+    top: 0;
+    background-image: url(../img/sectioin02-1.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+}
+.aboutBox1 .text {
+    width: 70vw;
+    padding-left: 20vw;
+    margin-top: -4vw;
+    line-height: 1.6;
+    font-size: 20px;
+    font-family: 'ChosunNm';
+    color: #4B3D30;
+}

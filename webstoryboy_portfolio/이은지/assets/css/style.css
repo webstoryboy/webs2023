@@ -1,0 +1,100 @@
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff0f;
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: end;
+    z-index: 1000;
+}
+#header h1 {
+    color: #fff;
+    width: 120px;
+    text-align: center;
+    padding: 16px 10px 10px 10px;
+}
+#header h1 span {
+    display: block;
+    font-family: 'PP Hatton';
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1;
+}
+#header .nav li {
+    display: inline;
+}
+#header .nav li a {
+    display: inline-block;
+    color: #fff;
+    padding: 8px;
+    font-family: 'PP Hatton';
+    text-transform: capitalize;
+    font-size: 18px;
+}
+#header .nav li.active a {
+    font-weight: 700;
+}
+
+
+#section1 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+
+}
+.title {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    gap: 5vw;
+}
+.title > div {
+    width: 20vw;
+    height: 60vh;
+    border-radius: 300px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center center;
+    color: #fff;
+    font-family: 'PP Hatton';
+}
+.title > div:nth-child(1){
+    background-image: url(../img/bg01.png);
+}
+.title > div:nth-child(2){
+    background-image: url(../img/bg02.png);
+}
+.title > div:nth-child(3){
+    background-image: url(../img/bg03.png);
+}
+.title > div h2 {
+    font-size: 2vw;
+    text-align: center;
+    line-height: 1.4;
+}
+
+
+
+#section2 {
+    width: 100%;
+    height: 200vh;
+    background-color: #b26161;
+}

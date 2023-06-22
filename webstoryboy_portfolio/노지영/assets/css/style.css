@@ -1,0 +1,71 @@
+#section1 {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+}
+#section1 .bg {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    left: 0; top: 0;
+    z-index: -1;
+}
+.text-wrap > span {
+    color: #fff;
+    font-family: 'Grandiflora One', serif;
+    background-color: #000;
+    font-size: 3vw;
+    line-height: 1;
+    border-radius: 100px;
+    padding: 0.5vw 4vw 2vw 4vw;
+    display: inline-block;
+    font-weight: bold;
+    margin: 0.4vw;
+}
+.title-wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+.title-wrap > div {
+    font-size: 5vw;
+    font-family: 'GmarketSans';
+    text-transform: uppercase;
+    background-color: #ccc;
+    display: inline-block;
+    padding: 1vw 5vw;
+    border-radius: 10vw;
+    color: #fff;
+    margin: 10px;
+}
+.title-wrap .img {
+    width: 9vw;
+    position: absolute;
+    left: -9vw;
+    top: 0;
+}
+.title-wrap .t1 {
+    background-color: #0044F3;
+    margin-left: -10vw;
+}
+.title-wrap .t2 {
+    background-color: #F32C00;
+    margin-left: 20vw;
+}
+.title-wrap .t3 {
+    background-color: #4BF300;
+    margin-left: -10vw;
+}
+
+/* section2 */
+#section2  {
+    height: 2000px;
+}
