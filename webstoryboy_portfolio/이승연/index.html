@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="contents">
+        <section id="section1">
+            <div class="sec1-wrap">
+                <div class="sec1-box">
+                    <div class="text">
+                        <div class="split">I HARNESS MY ENERGY AND CHANNEL IT INTO CRAFTING</div>
+                        <div class="split">REMARKABLE WEB EXPERIENCES ON THE DIGITAL CANVAS</div>
+                    </div>
+                    <h2 class="logo">
+                        <img src="https://dkdlelw-portfolio.web.app/assets/WebPublisher-ac559104.svg" alt="">
+                    </h2>
+                    <a href="#" class="scroll">scroll</a>
+                </div>
+            </div>
+        </section>
+        <!-- //section1 -->
+
+        <section id="section2">
+            <div class="sec2-img" aria-hidden="true"></div>
+            <div class="sec2-text">
+                <div class="split">PROFESSIONAL</div>
+                <div class="split">PORTFOLIO</div>
+            </div>
+            <div class="sec2-text2">
+                <img src="https://dkdlelw-portfolio.web.app/assets/images/aboutMe01.svg" alt="">
+            </div>
+            <div class="sec2-text3">
+                <img src="https://dkdlelw-portfolio.web.app/assets/images/aboutMe02.svg" alt="">
+            </div>
+            <div class="sec2-img2">
+                <img src="https://dkdlelw-portfolio.web.app/assets/idPhoto2-7e338200.png" alt="">
+            </div>
+            <div class="sec2-text4 split">
+                어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다.<br>
+                신입의 열정과 도전정신을 깊숙히 새기며 <br>
+                배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는<br>
+                개발자가 되겠습니다.
+            </div>
+        </section>
+        <!-- //section2 -->
+
+        <section id="section3"></section>
+        <section id="section4"></section>
+        <section id="section5"></section>
+        <section id="section6"></section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+
+    <script>
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        const targets = gsap.utils.toArray(".split");
+        let SplitClient = new SplitType(targets, { type: "lines, words, chars" });
+
+        
+
+        gsap.set("#section1 .sec1-wrap", {width: 0, height: 0})
+        gsap.set("#section1 .sec1-box", {width: 0})
+        gsap.set("#section1 .sec1-box .text .char", {autoAlpha: 0, y: 10})
+        gsap.set("#section1 .sec1-box .logo", {autoAlpha: 0, y: 50})
+        gsap.set("#section1 .sec1-box .scroll", {autoAlpha: 0, y: 50})
+
+        setTimeout(() => {
+            gsap.to(".sec1-wrap", {
+                duration: 1,
+                width: "100%", 
+                height: "100%", 
+                autoAlpha: 1, 
+                ease: "power3.out"
+            })
+            gsap.to(".sec1-box", {
+                duration: 1,
+                width: "60vw", 
+                autoAlpha: 1, 
+                delay: 0.8,
+                ease: "power3.out"
+            })
+            gsap.to("#section1 .sec1-box .text .char", {
+                duration: 1,
+                y: 0, 
+                autoAlpha: 1, 
+                delay: 2,
+                ease: "power3.out",
+                stagger: 0.01
+            })
+            gsap.to("#section1 .sec1-box .logo", {
+                duration: 1,
+                y: 0, 
+                autoAlpha: 1, 
+                delay: 2.6,
+                ease: "power3.out"
+            })
+            gsap.to("#section1 .sec1-box .scroll", {
+                duration: 1,
+                y: 0, 
+                autoAlpha: 1, 
+                delay: 3,
+                ease: "power3.out"
+            })
+        }, 2000);   
+
+
+        const panel = document.querySelector("#section1");
+    
+        ScrollTrigger.create({
+            trigger: panel,
+            start: "top top",
+            pin: true,
+            pinSpacing: false
+        });
+
+        const panel2 = document.querySelector("#section2");
+
+        const ani1 = gsap.timeline();
+        ani1.to(".sec1-box", {duration: 4, scale: 2, ease: "none"})
+
+        ScrollTrigger.create({
+            animation: ani1,
+            trigger: panel2,
+            start: "top 90%",
+            markers: false,
+            scrub: 0.5
+        });
+
+
+        const sec2Text = document.querySelector(".sec2-text");
+
+        const ani2 = gsap.timeline();
+        ani2.from(".sec2-text .line:nth-child(1) .char", {
+            y: 300,
+            autoAlpha: 0,
+            duration: 0.7,
+            ease: "back.out(1)",
+            stagger: 0.05
+        })
+
+        ScrollTrigger.create({
+            animation: ani2,
+            trigger: sec2Text,
+            start: "top 70%",
+            markers: true,
+            // scrub: 0.5
+        });
+
+
+
+
+
+
+    </script>
+</body>
+</html>

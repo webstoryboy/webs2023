@@ -1,64 +1,80 @@
-.wrap {
-    width: 500vw;
-    height: 100vh;
+#horizontal1 {
     display: flex;
     flex-wrap: wrap;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-.wrap > section {
-    width: 100vw;
+    width: 4200px;
     height: 100vh;
-    position: relative;
-    box-sizing: border-box;
 }
-#section1 span,
-.wrap > section > span {
+#section1 {background: #fff; width: 1200px; height: 100vh;}
+#section2 {background: #fff; width: 1000px; height: 100vh;}
+#section3 {background: #222; width: 1000px; height: 100vh;}
+#section4 {background: #333; width: 1000px; height: 100vh;}
+
+#section1 .text-wrap {
+    font-family: 'GmarketSans';
+    font-size: 14vh;
+    color: #2B38BF;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: bold;
+    padding: 20px;
+    
+}
+#section1 .text-wrap > div {
+    margin-bottom: 5px;
+}
+#section1 .scroll {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
-    color: #fff;
-    font-size: 10vw;
+    right: 0;
+    bottom: 0;
+    font-size: 14vh;
+    color: #2B38BF;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+    padding: 20px;
 }
-#section1 {
-    background-color: #ccc;
-}
+
 #section2 {
-    background-color: #222;
+    border-left: 2px solid #2B38BF;
 }
-#section3 {
-    background-color: #333;
-}
-#section4 {
-    background-color: #444;
-}
-#section2  {
-    position: relative;
-}
-#section2 .s1-box1 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100px;
+#section2 .sec2-img {
     height: 100vh;
-    background-color: #fff;
-    transform: translateX(80vw);
+    border-right: 2px solid #2B38BF;
+    width: 500px;
+    font-family: 'IropkeBatang';
+    color: #2B38BF;
 }
-#section2 .s1-box2 {
-    position: absolute;
-    left: 100px;
-    top: 0;
-    width: 100px;
+#section2 .sec2-img .img {
+    background-image: url(https://sdj-portfolio-5a461.web.app/assets/intro_image-9d1175bb.png);
+    background-position: center center;
+    background-size: cover;
+    height: calc(100vh - 185px);
+}
+#section2 .sec2-img p {
+    height: 185px;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+
+#section5 {background: #444; width: 100vw; height: 100vh;}
+#section6 {background: #555; width: 100vw; height: 100vh;}
+#section7 {background: #666; width: 100vw; height: 100vh;}
+#section8 {background: #777; width: 100vw; height: 100vh;}
+
+
+#horizontal2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400vw;
     height: 100vh;
-    background-color: #44ffd7;
-    transform: translateX(80vw);
 }
-#section2 .s1-box3 {
-    position: absolute;
-    left: 200px;
-    top: 0;
-    width: 100px;
-    height: 100vh;
-    background-color: #ff9696;
-    transform: translateX(80vw);
-}
+
+
+#section9 {background: #888; width: 100vw; height: 100vh;}
+#section10 {background: #999; width: 100vw; height: 100vh;}
+#section11 {background: #ccc; width: 100vw; height: 100vh;}
+#section12 {background: #ddd; width: 100vw; height: 100vh;}
